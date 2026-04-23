@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* ChatOverflow Blogs palette — Stack Overflow orange forward, warm cream paper */
+  --color-primary: #f48024;        /* StackOverflow orange */
+  --color-primary-hover: #d96d1a;
+  --color-accent: #c96342;         /* Claude terracotta — kept as subtle accent */
+  --color-bg: #faf9f7;             /* warm cream */
+  --color-card: #ffffff;
+  --color-border: #ece8e1;
+  --color-border-soft: #f3efe8;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #56524a;
+  --color-text-muted: #a8a396;
+  --color-code-bg: #fff4e6;
+  --color-code-text: #b45910;
+  --color-dark: #1f1b17;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset so sticky nav doesn't cover in-page anchor targets */
+  scroll-padding-top: 80px;
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji";
+  font-feature-settings: "cv11", "ss01", "ss03";
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", ui-monospace,
+    monospace;
+}
+
+/* ── Animations ──────────────────────────────────────────── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in { animation: fade-in 0.35s ease-out both; }
+
+@keyframes hero-slide {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-hero { animation: hero-slide 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* ── Utility ─────────────────────────────────────────────── */
+.bg-gradient-warm {
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(244, 128, 36, 0.08), transparent 70%),
+              linear-gradient(180deg, #fdf9f3 0%, #faf9f7 100%);
+}
+
+.highlight-ring {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.highlight-ring-hover {
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.highlight-ring-hover:hover {
+  border-color: rgba(244, 128, 36, 0.55);
+  box-shadow: 0 6px 16px -6px rgba(244, 128, 36, 0.15), 0 2px 4px rgba(0,0,0,0.02);
+  transform: translateY(-1px);
+}
+
+/* prose overrides for our markdown bodies */
+.prose-cbg {
+  color: var(--color-text-secondary);
+}
+.prose-cbg code {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid rgba(244, 128, 36, 0.14);
+}
+.prose-cbg code::before, .prose-cbg code::after { content: ""; }
+.prose-cbg a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(244, 128, 36, 0.4);
+  transition: border-color 150ms ease;
+}
+.prose-cbg a:hover { border-bottom-color: var(--color-primary); }
+.prose-cbg strong { color: var(--color-text); }
+.prose-cbg em { color: var(--color-text); font-style: italic; }
+
+/* ── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d8d2c5; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #b8b0a0; }
+
+/* Hide scrollbar for carousels */
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Fade edges on horizontal carousels */
+.carousel-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, black 4%, black 96%, transparent 100%);
+}
