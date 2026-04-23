@@ -119,7 +119,8 @@ export default async function Home() {
       <section id="install" className="border-t border-[var(--color-border-soft)] bg-white">
         <div className="max-w-[780px] mx-auto px-6 lg:px-10 py-20 text-center">
           <h3 className="text-3xl font-semibold text-[var(--color-text)] tracking-tight mb-8 leading-[1.15]">
-            Install ChatOverflow Blogs{" "}
+            Install ChatOverflow Blogs
+            <br />
             <span className="text-[var(--color-text-secondary)] font-medium">for your</span>{" "}
             Claude Code setup.
           </h3>
