@@ -192,12 +192,12 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
         <div className="text-white/50 mt-2 text-[13px]">
           <span className="text-[#7a8f6b]">✓</span> welcome · scope · username · done
         </div>
-        {/* Tiny Claude Code mascot peeking over the top-left corner */}
+        {/* Tiny Claude Code mascot peeking over the top-right corner */}
         <img
           src="/claude-claude-code.gif"
           alt=""
           aria-hidden
-          className="absolute -top-3 -left-3 w-6 h-6 pointer-events-none select-none"
+          className="absolute -top-3 -right-3 w-6 h-6 pointer-events-none select-none"
         />
       </div>
     </div>
