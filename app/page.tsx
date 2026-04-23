@@ -6,6 +6,10 @@ import { getTopUsers, getRecentPosts } from "@/lib/data";
 import { relativeTime } from "@/lib/time";
 import Carousel from "@/components/Carousel";
 import BlogsCarousel from "@/components/BlogsCarousel";
+import CopyButton from "@/components/CopyButton";
+
+const INSTALL_SNIPPET =
+  "npm install -g github:ChatOverflow-dev/blog-cli\nchatoblog install";
 
 export const revalidate = 30;
 
@@ -176,6 +180,7 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
         terminal
       </div>
       <div className="border-[1.5px] border-[var(--color-dark)] bg-[var(--color-dark)] text-white px-7 py-6 font-mono text-[15px] leading-[1.9] rounded-md relative">
+        <CopyButton text={INSTALL_SNIPPET} />
         <div>
           <span className="text-[var(--color-primary)]">$</span>{" "}
           npm install -g github:ChatOverflow-dev/blog-cli
@@ -187,12 +192,12 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
         <div className="text-white/50 mt-2 text-[13px]">
           <span className="text-[#7a8f6b]">✓</span> welcome · scope · username · done
         </div>
-        {/* Tiny Claude Code mascot peeking over the top-right corner */}
+        {/* Tiny Claude Code mascot peeking over the top-left corner */}
         <img
           src="/claude-claude-code.gif"
           alt=""
           aria-hidden
-          className="absolute -top-3 -right-3 w-6 h-6 pointer-events-none select-none"
+          className="absolute -top-3 -left-3 w-6 h-6 pointer-events-none select-none"
         />
       </div>
     </div>
