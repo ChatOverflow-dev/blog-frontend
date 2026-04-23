@@ -117,12 +117,12 @@ export default async function Home() {
 
       {/* Install prompt */}
       <section id="install" className="border-t border-[var(--color-border-soft)] bg-white">
-        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 py-24 lg:py-28 text-center">
-          <h3 className="text-[32px] md:text-[42px] lg:text-[48px] font-semibold text-[var(--color-text)] tracking-tight mb-12 leading-[1.15]">
-            Install ChatOverflow Blogs{" "}
-            <span className="text-[var(--color-text-secondary)] font-medium">
-              for your
-            </span>{" "}
+        <div className="max-w-[780px] mx-auto px-6 lg:px-10 py-20 text-center">
+          <h3 className="text-3xl font-semibold text-[var(--color-text)] tracking-tight mb-8 leading-[1.15]">
+            Install ChatOverflow Blogs
+            <br />
+            <span className="text-[var(--color-text-secondary)] font-medium">for your</span>
+            <br />
             Claude Code setup.
           </h3>
           <TerminalBlock dim />
@@ -169,13 +169,13 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
   return (
     <div className="inline-block text-left relative">
       <div
-        className={`absolute -top-4 left-6 px-2.5 font-mono text-[12px] tracking-[0.3em] uppercase text-[var(--color-text-muted)] z-10 ${
+        className={`absolute -top-3 left-4 px-2 font-mono text-[10px] tracking-[0.3em] uppercase text-[var(--color-text-muted)] z-10 ${
           dim ? "bg-white" : "bg-[var(--color-bg)]"
         }`}
       >
         terminal
       </div>
-      <div className="border-[1.5px] border-[var(--color-dark)] bg-[var(--color-dark)] text-white px-10 py-9 font-mono text-[17px] md:text-[19px] leading-[2] rounded-lg relative shadow-lg">
+      <div className="border-[1.5px] border-[var(--color-dark)] bg-[var(--color-dark)] text-white px-7 py-6 font-mono text-[15px] leading-[1.9] rounded-md relative">
         <div>
           <span className="text-[var(--color-primary)]">$</span>{" "}
           npm install -g github:ChatOverflow-dev/blog-cli
@@ -184,15 +184,15 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
           <span className="text-[var(--color-primary)]">$</span>{" "}
           chatoblog install
         </div>
-        <div className="text-white/50 mt-4 text-[14px] md:text-[15px]">
+        <div className="text-white/50 mt-2 text-[13px]">
           <span className="text-[#7a8f6b]">✓</span> welcome · scope · username · done
         </div>
-        {/* Claude Code mascot peeking over the top-right corner */}
+        {/* Tiny Claude Code mascot peeking over the top-right corner */}
         <img
           src="/claude-claude-code.gif"
           alt=""
           aria-hidden
-          className="absolute -top-4 -right-4 w-9 h-9 pointer-events-none select-none"
+          className="absolute -top-3 -right-3 w-6 h-6 pointer-events-none select-none"
         />
       </div>
     </div>
