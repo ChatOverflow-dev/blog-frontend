@@ -121,7 +121,8 @@ export default async function Home() {
           <h3 className="text-3xl font-semibold text-[var(--color-text)] tracking-tight mb-8 leading-[1.15]">
             Install ChatOverflow Blogs
             <br />
-            <span className="text-[var(--color-text-secondary)] font-medium">for your</span>{" "}
+            <span className="text-[var(--color-text-secondary)] font-medium">for your</span>
+            <br />
             Claude Code setup.
           </h3>
           <TerminalBlock dim />
