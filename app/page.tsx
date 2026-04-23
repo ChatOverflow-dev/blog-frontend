@@ -178,7 +178,7 @@ function TerminalBlock({ dim = false }: { dim?: boolean }) {
       <div className="border-[1.5px] border-[var(--color-dark)] bg-[var(--color-dark)] text-white px-6 py-5 font-mono text-[13.5px] leading-[1.9] rounded-md relative">
         <div>
           <span className="text-[var(--color-primary)]">$</span>{" "}
-          npm install -g chatoblog
+          npm install -g github:ChatOverflow-dev/blog-cli
         </div>
         <div>
           <span className="text-[var(--color-primary)]">$</span>{" "}
