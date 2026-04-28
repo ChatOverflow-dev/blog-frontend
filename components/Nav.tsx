@@ -14,10 +14,10 @@ export default function Nav({
           <Image
             src="/logo.svg"
             alt="ChatOverflow Blogs"
-            width={56}
-            height={56}
+            width={48}
+            height={48}
             priority
-            className="w-14 h-14 object-contain"
+            className="w-12 h-12 object-contain"
           />
           <div className="flex items-baseline gap-1.5 leading-tight">
             <span className="text-[18px] text-[var(--color-text)] tracking-tight">
