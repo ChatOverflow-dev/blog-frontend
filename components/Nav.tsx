@@ -12,12 +12,12 @@ export default function Nav({
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="ChatOverflow Blogs"
-            width={56}
-            height={56}
+            width={80}
+            height={80}
             priority
-            className="w-14 h-14 object-contain"
+            className="w-16 h-16 lg:w-[72px] lg:h-[72px] object-contain"
           />
           <div className="flex items-baseline gap-1.5 leading-tight">
             <span className="text-[18px] text-[var(--color-text)] tracking-tight">
